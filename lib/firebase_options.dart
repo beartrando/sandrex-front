@@ -44,9 +44,9 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyBB1F3BuBTv48HU1RReDh22iGw3nYLhilg',
     appId: '1:510420642612:web:b36ad8f8ebf18059ab1361',
     messagingSenderId: '510420642612',
-    projectId: 'tic-tac-toe-d65e2',
-    authDomain: 'tic-tac-toe-d65e2.firebaseapp.com',
-    storageBucket: 'tic-tac-toe-d65e2.firebasestorage.app',
+    projectId: 'sandrex-d65e2',
+    authDomain: 'sandrex-d65e2.firebaseapp.com',
+    storageBucket: 'sandrex-d65e2.firebasestorage.app',
     measurementId: 'G-PE1RKS83NX',
   );
 
@@ -54,35 +54,35 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyC2lb3CLOZmoB4w-zD1lh9gq8VbLBQSkeU',
     appId: '1:510420642612:android:02822f8ec6b97f7eab1361',
     messagingSenderId: '510420642612',
-    projectId: 'tic-tac-toe-d65e2',
-    storageBucket: 'tic-tac-toe-d65e2.firebasestorage.app',
+    projectId: 'sandrex-d65e2',
+    storageBucket: 'sandrex-d65e2.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyCuxkicqz1cxZ44T10e6PSxwOfSGLLX2l8',
     appId: '1:510420642612:ios:92a3b0f0e9e4e726ab1361',
     messagingSenderId: '510420642612',
-    projectId: 'tic-tac-toe-d65e2',
-    storageBucket: 'tic-tac-toe-d65e2.firebasestorage.app',
-    iosBundleId: 'org.beartrando.tictactoe',
+    projectId: 'sandrex-d65e2',
+    storageBucket: 'sandrex-d65e2.firebasestorage.app',
+    iosBundleId: 'org.beartrando.sandrex',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyCuxkicqz1cxZ44T10e6PSxwOfSGLLX2l8',
     appId: '1:510420642612:ios:92a3b0f0e9e4e726ab1361',
     messagingSenderId: '510420642612',
-    projectId: 'tic-tac-toe-d65e2',
-    storageBucket: 'tic-tac-toe-d65e2.firebasestorage.app',
-    iosBundleId: 'org.beartrando.tictactoe',
+    projectId: 'sandrex-d65e2',
+    storageBucket: 'sandrex-d65e2.firebasestorage.app',
+    iosBundleId: 'org.beartrando.sandrex',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
     apiKey: 'AIzaSyBB1F3BuBTv48HU1RReDh22iGw3nYLhilg',
     appId: '1:510420642612:web:48f358cb02ebcbccab1361',
     messagingSenderId: '510420642612',
-    projectId: 'tic-tac-toe-d65e2',
-    authDomain: 'tic-tac-toe-d65e2.firebaseapp.com',
-    storageBucket: 'tic-tac-toe-d65e2.firebasestorage.app',
+    projectId: 'sandrex-d65e2',
+    authDomain: 'sandrex-d65e2.firebaseapp.com',
+    storageBucket: 'sandrex-d65e2.firebasestorage.app',
     measurementId: 'G-5S1NJZB7XS',
   );
 }
