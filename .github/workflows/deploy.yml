@@ -114,16 +114,11 @@ jobs:
           channel: stable
           cache: true
 
+      - name: Generate environment files
+        run: dart run tool/generate_env.dart
+
       - name: Create .env
-        run: |
-          cat > .env <<EOF
-          ENV=${{ github.ref_name }}
-          GATEWAY_HOST=${{ secrets.GATEWAY_HOST }}
-          GATEWAY_PORT=${{ secrets.GATEWAY_PORT }}
-          STREAMING_HOST=${{ secrets.STREAMING_HOST }}
-          STREAMING_PORT=${{ secrets.STREAMING_PORT }}
-          MOVE_TIMEOUT=${{ secrets.MOVE_TIMEOUT }}
-          EOF
+        run: cp ".env.${{ github.ref_name }}" .env
 
       - name: Install dependencies
         run: flutter pub get
@@ -148,7 +143,7 @@ jobs:
       - name: Checkout proto repository
         uses: actions/checkout@v4
         with:
-          repository: beartrando/sandrex-proto
+          repository: beartrando/lenvora-proto
           ref: master
           path: infra/proto
           token: ${{ secrets.GH_PAT }}
@@ -180,20 +175,6 @@ jobs:
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
           create_credentials_file: true
-
-
-      - name: Test Google auth
-        run: |
-          echo "Testing Google authentication..."
-          gcloud auth list
-          gcloud auth print-access-token > /dev/null
-          echo "Google access token obtained successfully"
-
-      - name: Debug Google credentials
-        run: |
-          echo "Credentials file: ${{ steps.auth.outputs.credentials_file_path }}"
-          cat "${{ steps.auth.outputs.credentials_file_path }}" | \
-            sed -E 's/"client_email": "[^"]+"/"client_email": "***"/'
 
       - name: Upload to Google Play (internal)
         if: github.ref_name != 'prod'
